@@ -1,0 +1,2884 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>ForYou Reinigung ✨ High Quality Cleaning</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ForYou Reinigung – Moderne Reinigungsfirma in Deutschland. Wohnungen, Büros, Fenster & mehr." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --bg-soft: #ffffff;
+      --bg-strong: #ecfdf5;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --accent: #22c55e;
+      --accent-soft: rgba(34, 197, 94, 0.15);
+      --accent-strong: #16a34a;
+      --accent-glow: rgba(34, 197, 94, 0.6);
+      --magic-1: #22c55e;
+      --magic-2: #38bdf8;
+      --magic-3: #a78bfa;
+      --border-soft: rgba(148, 163, 184, 0.4);
+      --shadow-soft: 0 20px 60px rgba(15, 23, 42, 0.15);
+      --shadow-glow: 0 0 40px rgba(34, 197, 94, 0.4);
+      --radius-xl: 28px;
+      --radius-2xl: 36px;
+      --transition-fast: 0.2s ease-out;
+      --transition-normal: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-slow: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    body.dark {
+      --bg: #030712;
+      --bg-soft: #0f172a;
+      --bg-strong: #064e3b;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --accent: #4ade80;
+      --accent-soft: rgba(74, 222, 128, 0.2);
+      --accent-strong: #22c55e;
+      --accent-glow: rgba(74, 222, 128, 0.7);
+      --border-soft: rgba(148, 163, 184, 0.3);
+      --shadow-soft: 0 25px 80px rgba(0, 0, 0, 0.7);
+      --shadow-glow: 0 0 50px rgba(74, 222, 128, 0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      background: 
+        radial-gradient(ellipse at 20% 10%, rgba(34, 197, 94, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 30%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 80%, rgba(167, 139, 250, 0.06) 0%, transparent 50%),
+        var(--bg);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.65;
+      overflow-x: hidden;
+      transition: background var(--transition-normal), color var(--transition-normal);
+      cursor: default;
+    }
+
+    body.dark {
+      background: 
+        radial-gradient(ellipse at 20% 10%, rgba(34, 197, 94, 0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 30%, rgba(56, 189, 248, 0.1) 0%, transparent 55%),
+        radial-gradient(ellipse at 50% 100%, rgba(167, 139, 250, 0.08) 0%, transparent 60%),
+        linear-gradient(180deg, #020617 0%, #0f172a 40%, #020617 100%);
+    }
+
+    /* ✨ Magical Particles Background ✨ */
+    .magic-particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0;
+      animation: float-up var(--transition-slow) infinite ease-in-out;
+      box-shadow: 0 0 10px var(--accent-glow);
+    }
+
+    @keyframes float-up {
+      0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.8;
+      }
+      90% {
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-20vh) scale(1);
+        opacity: 0;
+      }
+    }
+
+    /* ✨ Cursor Magic ✨ */
+    .magic-cursor {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform var(--transition-fast), opacity var(--transition-fast);
+      opacity: 0;
+      mix-blend-mode: screen;
+      box-shadow: 0 0 20px var(--accent-glow);
+    }
+
+    .magic-cursor.active {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+
+    .sparkle {
+      position: fixed;
+      pointer-events: none;
+      z-index: 9998;
+      animation: sparkle-burst 0.6s ease-out forwards;
+      font-size: 14px;
+      opacity: 0;
+    }
+
+    @keyframes sparkle-burst {
+      0% {
+        transform: translate(-50%, -50%) scale(0) rotate(0deg);
+        opacity: 1;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1.5) rotate(180deg);
+        opacity: 0;
+      }
+    }
+
+    /* ✨ Header Magic ✨ */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(24px);
+      background: linear-gradient(to bottom, rgba(248, 250, 252, 0.95), rgba(248, 250, 252, 0.85));
+      border-bottom: 1px solid var(--border-soft);
+      transition: all var(--transition-normal);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    body.dark header {
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.85));
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    header.magic-active {
+      box-shadow: var(--shadow-glow);
+      border-color: var(--accent);
+    }
+
+    header.magic-active::after {
+      content: "";
+      position: absolute;
+      left: 5%;
+      right: 5%;
+      bottom: -1px;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, 
+        transparent, 
+        var(--magic-1), 
+        var(--magic-2), 
+        var(--magic-3), 
+        var(--magic-1), 
+        transparent);
+      animation: gradient-flow 3s linear infinite;
+      box-shadow: 0 0 25px var(--accent-glow);
+      opacity: 0.95;
+    }
+
+    @keyframes gradient-flow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #bbf7d0, var(--magic-1) 40%, var(--accent-strong) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #022c22;
+      font-weight: 800;
+      font-size: 20px;
+      box-shadow: 0 0 30px var(--accent-glow);
+      position: relative;
+      animation: pulse-glow 2.5s ease-in-out infinite;
+      transition: transform var(--transition-fast);
+    }
+
+    .logo-mark:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 25px var(--accent-glow); }
+      50% { box-shadow: 0 0 45px var(--accent-glow), 0 0 60px rgba(56, 189, 248, 0.5); }
+    }
+
+    .logo-mark::after {
+      content: "✨";
+      position: absolute;
+      font-size: 12px;
+      right: -4px;
+      top: -4px;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .logo-text-main {
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      font-size: 21px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--text-main), var(--accent-strong));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      position: relative;
+    }
+
+    .logo-text-main::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--magic-1), var(--magic-2), var(--magic-3));
+      border-radius: 2px;
+      opacity: 0.7;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--transition-normal);
+    }
+
+    .logo:hover .logo-text-main::after {
+      transform: scaleX(1);
+    }
+
+    .logo-wand {
+      font-size: 18px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      animation: wand-wave 3s ease-in-out infinite;
+      box-shadow: 0 0 15px var(--accent-glow);
+    }
+
+    @keyframes wand-wave {
+      0%, 100% { transform: rotate(-5deg); }
+      50% { transform: rotate(8deg); }
+    }
+
+    .logo-text-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-left: 4px;
+      position: relative;
+    }
+
+    .logo-text-sub::before {
+      content: "";
+      position: absolute;
+      left: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 10px var(--accent-glow);
+      animation: pulse-dot 1.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: translateY(-50%) scale(1); }
+      50% { opacity: 0.6; transform: translateY(-50%) scale(1.3); }
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      position: relative;
+      padding: 4px 0;
+      transition: color var(--transition-fast);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--magic-1), var(--magic-2), var(--magic-3));
+      border-radius: 2px;
+      transition: width var(--transition-normal);
+      box-shadow: 0 0 10px var(--accent-glow);
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .toggle-group {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      transition: all var(--transition-fast);
+    }
+
+    body.dark .toggle-group {
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .toggle-group:hover {
+      border-color: var(--accent);
+      box-shadow: 0 0 15px var(--accent-glow);
+    }
+
+    .toggle-btn {
+      border: none;
+      background: transparent;
+      font-size: 12px;
+      cursor: pointer;
+      color: var(--text-muted);
+      padding: 4px 10px;
+      border-radius: 999px;
+      transition: all var(--transition-fast);
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .toggle-btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(135deg, var(--accent-soft), transparent);
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+      z-index: -1;
+    }
+
+    .toggle-btn:hover::before {
+      opacity: 1;
+    }
+
+    .toggle-btn.active {
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+      font-weight: 600;
+      box-shadow: 0 0 12px var(--accent-glow);
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 10px 20px;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all var(--transition-normal);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      letter-spacing: 0.02em;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(135deg, var(--magic-1), var(--magic-2), var(--magic-3), var(--magic-1));
+      background-size: 300% 300%;
+      z-index: -1;
+      transition: background-position var(--transition-slow);
+      opacity: 0;
+    }
+
+    .btn:hover::before {
+      opacity: 1;
+      animation: gradient-shift 3s ease infinite;
+    }
+
+    @keyframes gradient-shift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .btn::after {
+      content: "";
+      position: absolute;
+      inset: 2px;
+      border-radius: inherit;
+      background: var(--bg-soft);
+      z-index: -1;
+      transition: opacity var(--transition-fast);
+    }
+
+    body.dark .btn::after {
+      background: var(--bg-soft);
+    }
+
+    .btn:hover::after {
+      opacity: 0.95;
+    }
+
+    .btn-primary {
+      color: var(--text-main);
+      box-shadow: 0 8px 30px var(--accent-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 45px var(--accent-glow);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--text-muted);
+      border: 1px solid var(--border-soft);
+    }
+
+    body.dark .btn-ghost {
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, 1);
+      color: var(--text-main);
+      border-color: var(--accent);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    body.dark .btn-ghost:hover {
+      background: rgba(15, 23, 42, 1);
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 24px 100px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ✨ Hero Section Magic ✨ */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: center;
+      padding: 40px 28px;
+      margin-top: 20px;
+      border-radius: var(--radius-2xl);
+      background: 
+        radial-gradient(circle at 15% 20%, rgba(34, 197, 94, 0.18) 0%, transparent 50%),
+        radial-gradient(circle at 85% 80%, rgba(56, 189, 248, 0.15) 0%, transparent 50%),
+        var(--bg-soft);
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+      transition: all var(--transition-normal);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      border-radius: inherit;
+      padding: 2px;
+      background: linear-gradient(45deg, transparent, var(--accent), transparent, var(--magic-2), transparent);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0.4;
+      animation: border-flow 4s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes border-flow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+
+    .hero:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-glow);
+      border-color: var(--accent);
+    }
+
+    .hero-left {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid var(--border-soft);
+      color: var(--text-muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 18px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: all var(--transition-fast);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-pill::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.1), transparent);
+      transform: translateX(-100%);
+      transition: transform var(--transition-normal);
+    }
+
+    .hero-pill:hover::before {
+      transform: translateX(100%);
+    }
+
+    body.dark .hero-pill {
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    .hero-pill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #bbf7d0, var(--magic-1) 40%, var(--accent-strong) 100%);
+      box-shadow: 0 0 18px var(--accent-glow);
+      animation: pulse-dot 1.5s ease-in-out infinite;
+    }
+
+    .hero-title {
+      font-size: clamp(34px, 5vw, 48px);
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      line-height: 1.1;
+      position: relative;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, var(--magic-1), var(--magic-2), var(--magic-3), var(--magic-1));
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: gradient-shift 5s ease infinite;
+      display: block;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 500px;
+      margin-bottom: 24px;
+      font-weight: 400;
+      line-height: 1.7;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .badge {
+      font-size: 12px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--text-muted);
+      font-weight: 500;
+      transition: all var(--transition-fast);
+      position: relative;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, var(--accent-soft), transparent);
+      transform: translateX(-100%);
+      transition: transform var(--transition-normal);
+    }
+
+    .badge:hover {
+      border-color: var(--accent);
+      color: var(--accent-strong);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px var(--accent-glow);
+    }
+
+    .badge:hover::before {
+      transform: translateX(100%);
+    }
+
+    body.dark .badge {
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .hero-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-weight: 400;
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+      padding-left: 16px;
+    }
+
+    .hero-meta span::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 12px var(--accent-glow);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    .hero-meta-dot {
+      display: none;
+    }
+
+    .hero-right {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      gap: 18px;
+    }
+
+    /* ✨ Card Magic ✨ */
+    .card-main {
+      border-radius: var(--radius-2xl);
+      background: 
+        radial-gradient(circle at 20% 10%, rgba(34, 197, 94, 0.15), transparent 50%),
+        var(--bg-soft);
+      border: 1px solid var(--border-soft);
+      padding: 22px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+      transition: all var(--transition-normal);
+    }
+
+    .card-main::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 0%, rgba(34, 197, 94, 0.05) 50%, transparent 100%);
+      opacity: 0;
+      transition: opacity var(--transition-normal);
+      pointer-events: none;
+    }
+
+    .card-main:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-glow);
+      border-color: var(--accent);
+    }
+
+    .card-main:hover::before {
+      opacity: 1;
+    }
+
+    .card-main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .card-main-title {
+      font-size: 14px;
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .status-pill {
+      font-size: 12px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-weight: 600;
+      box-shadow: 0 0 15px var(--accent-glow);
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 14px rgba(34, 197, 94, 0.9);
+      animation: pulse-dot 1.2s ease-in-out infinite;
+    }
+
+    .card-main-body {
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 18px;
+      position: relative;
+      overflow: hidden;
+      transition: all var(--transition-fast);
+    }
+
+    body.dark .card-main-body {
+      background: rgba(15, 23, 42, 0.97);
+      border-color: rgba(30, 64, 175, 0.6);
+    }
+
+    .card-main-body:hover {
+      border-color: var(--accent);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-main-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px dashed var(--border-soft);
+    }
+
+    .card-main-row:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .card-main-text {
+      font-size: 14px;
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .card-main-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    .card-main-tag {
+      font-size: 12px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid var(--border-soft);
+      color: var(--text-muted);
+      font-weight: 500;
+      transition: all var(--transition-fast);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .card-main-tag:hover {
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    body.dark .card-main-tag {
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    .card-main-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .card-main-footer small {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .card-main-footer strong {
+      color: var(--text-main);
+      font-weight: 700;
+      font-size: 14px;
+      background: linear-gradient(135deg, var(--magic-1), var(--magic-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .card-floating {
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.97);
+      border: 1px solid var(--border-soft);
+      padding: 12px 14px;
+      font-size: 12px;
+      color: var(--text-muted);
+      display: inline-flex;
+      flex-direction: column;
+      gap: 5px;
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      transform: translateY(0);
+      box-shadow: var(--shadow-soft);
+      animation: float-card 3s ease-in-out infinite;
+      z-index: 3;
+      backdrop-filter: blur(10px);
+    }
+
+    @keyframes float-card {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    body.dark .card-floating {
+      background: rgba(15, 23, 42, 0.97);
+    }
+
+    .card-floating span {
+      color: var(--text-main);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card-floating span::before {
+      content: "✨";
+      font-size: 10px;
+      animation: sparkle 1.5s ease-in-out infinite;
+    }
+
+    @keyframes sparkle {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.2); }
+    }
+
+    /* ✨ Section Magic ✨ */
+    .section {
+      margin-top: 64px;
+      position: relative;
+    }
+
+    .section::before {
+      content: "";
+      position: absolute;
+      top: -32px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--magic-1), var(--magic-2), var(--magic-3));
+      opacity: 0.7;
+      box-shadow: 0 0 20px var(--accent-glow);
+      animation: pulse-line 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-line {
+      0%, 100% { opacity: 0.5; transform: translateX(-50%) scaleX(0.9); }
+      50% { opacity: 1; transform: translateX(-50%) scaleX(1.1); }
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 20px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-soft);
+      position: relative;
+    }
+
+    .section-header::after {
+      content: "✨";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 16px;
+      animation: float 2.5s ease-in-out infinite;
+      opacity: 0.8;
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 40%;
+      height: 3px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--magic-1), var(--magic-2));
+      opacity: 0.8;
+    }
+
+    .section-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 480px;
+      margin-top: 8px;
+      line-height: 1.7;
+    }
+
+    .section-tag {
+      font-size: 12px;
+      padding: 5px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.95);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all var(--transition-fast);
+    }
+
+    .section-tag:hover {
+      border-color: var(--accent);
+      color: var(--accent-strong);
+      box-shadow: 0 0 15px var(--accent-glow);
+      transform: translateY(-2px);
+    }
+
+    body.dark .section-tag {
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    /* ✨ Grid & Cards Magic ✨ */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      border-radius: var(--radius-xl);
+      background: rgba(255, 255, 255, 0.97);
+      border: 1px solid var(--border-soft);
+      padding: 20px;
+      font-size: 14px;
+      color: var(--text-muted);
+      position: relative;
+      overflow: hidden;
+      transition: all var(--transition-normal);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 0%, var(--accent-soft) 50%, transparent 100%);
+      opacity: 0;
+      transition: opacity var(--transition-normal);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body.dark .card {
+      background: rgba(15, 23, 42, 0.97);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-glow);
+      border-color: var(--accent);
+      z-index: 5;
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      color: var(--text-main);
+      margin: 10px 0 8px;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+    }
+
+    .card h3::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 30px;
+      height: 2px;
+      border-radius: 1px;
+      background: var(--accent);
+      opacity: 0.7;
+      transition: width var(--transition-fast);
+    }
+
+    .card:hover h3::after {
+      width: 100%;
+    }
+
+    .card-pill {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid var(--border-soft);
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 10px;
+      font-weight: 500;
+      transition: all var(--transition-fast);
+    }
+
+    .card-pill:hover {
+      border-color: var(--accent);
+      color: var(--accent-strong);
+      box-shadow: 0 0 12px var(--accent-glow);
+      transform: translateY(-1px);
+    }
+
+    body.dark .card-pill {
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    .card-pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 12px var(--accent-glow);
+      animation: pulse-dot 1.5s ease-in-out infinite;
+    }
+
+    .card-list {
+      list-style: none;
+      margin-top: 12px;
+      font-size: 13px;
+    }
+
+    .card-list li {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      margin-bottom: 6px;
+      padding-left: 4px;
+      transition: transform var(--transition-fast);
+    }
+
+    .card-list li:hover {
+      transform: translateX(4px);
+    }
+
+    .card-list li::before {
+      content: "✨";
+      color: var(--accent);
+      margin-top: 2px;
+      font-size: 10px;
+      animation: sparkle 2s ease-in-out infinite;
+    }
+
+    /* ✨ Before/After Magic ✨ */
+    .before-after-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .ba-card {
+      border-radius: var(--radius-xl);
+      background: rgba(255, 255, 255, 0.97);
+      border: 1px solid var(--border-soft);
+      padding: 16px;
+      box-shadow: var(--shadow-soft);
+      transition: all var(--transition-normal);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ba-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 0%, rgba(56, 189, 248, 0.08) 50%, transparent 100%);
+      opacity: 0;
+      transition: opacity var(--transition-normal);
+      pointer-events: none;
+    }
+
+    .ba-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-glow);
+      border-color: var(--magic-2);
+    }
+
+    .ba-card:hover::before {
+      opacity: 1;
+    }
+
+    body.dark .ba-card {
+      background: rgba(15, 23, 42, 0.97);
+    }
+
+    .ba-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .ba-wrapper {
+      position: relative;
+      width: 100%;
+      border-radius: 18px;
+      overflow: hidden;
+      cursor: ew-resize;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      transition: box-shadow var(--transition-normal);
+    }
+
+    .ba-wrapper:hover {
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25), 0 0 30px var(--accent-glow);
+    }
+
+    .ba-img {
+      display: block;
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+
+    .ba-wrapper:hover .ba-img {
+      transform: scale(1.03);
+    }
+
+    .ba-after {
+      position: absolute;
+      inset: 0;
+      width: 50%;
+      overflow: hidden;
+      border-right: 3px solid rgba(255, 255, 255, 0.95);
+      box-shadow: 2px 0 15px rgba(0, 0, 0, 0.2);
+      transition: width var(--transition-fast) ease-out;
+    }
+
+    .ba-after img {
+      width: 200%;
+      height: 100%;
+      object-fit: cover;
+      transform: translateX(-25%);
+      transition: transform var(--transition-slow);
+    }
+
+    .ba-wrapper:hover .ba-after img {
+      transform: translateX(-27%);
+    }
+
+    .ba-handle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--magic-1), var(--magic-2));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      box-shadow: 0 0 25px var(--accent-glow), 0 5px 20px rgba(0, 0, 0, 0.3);
+      cursor: grab;
+      transition: all var(--transition-fast);
+      z-index: 10;
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+
+    .ba-handle:active {
+      cursor: grabbing;
+      transform: translate(-50%, -50%) scale(0.95);
+    }
+
+    .ba-handle::after {
+      content: "";
+      position: absolute;
+      inset: -4px;
+      border-radius: inherit;
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      animation: ripple 2s ease-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes ripple {
+      0% { transform: scale(0.8); opacity: 1; }
+      100% { transform: scale(2); opacity: 0; }
+    }
+
+    /* ✨ Pricing Magic ✨ */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .price-card {
+      border-radius: var(--radius-xl);
+      background: rgba(255, 255, 255, 0.97);
+      border: 1px solid var(--border-soft);
+      padding: 24px 20px 22px;
+      font-size: 14px;
+      color: var(--text-muted);
+      position: relative;
+      overflow: hidden;
+      transition: all var(--transition-normal);
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .price-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 0%, var(--accent-soft) 30%, transparent 70%);
+      opacity: 0;
+      transition: opacity var(--transition-normal);
+      pointer-events: none;
+    }
+
+    body.dark .price-card {
+      background: rgba(15, 23, 42, 0.97);
+    }
+
+    .price-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-glow);
+      border-color: var(--accent);
+      z-index: 5;
+    }
+
+    .price-card:hover::before {
+      opacity: 1;
+    }
+
+    .price-card.highlight {
+      border-color: rgba(34, 197, 94, 0.8);
+      box-shadow: var(--shadow-glow);
+      background: 
+        radial-gradient(circle at 20% 10%, rgba(34, 197, 94, 0.18), transparent 50%),
+        rgba(255, 255, 255, 0.97);
+      transform: scale(1.03);
+      z-index: 3;
+    }
+
+    .price-card.highlight::before {
+      opacity: 0.3;
+    }
+
+    .price-card.highlight:hover {
+      transform: scale(1.05) translateY(-10px);
+      box-shadow: 0 25px 70px rgba(34, 197, 94, 0.5);
+    }
+
+    body.dark .price-card.highlight {
+      background: 
+        radial-gradient(circle at 20% 10%, rgba(34, 197, 94, 0.22), transparent 55%),
+        rgba(15, 23, 42, 0.97);
+    }
+
+    .price-card h3 {
+      font-size: 17px;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .price-tagline {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      line-height: 1.6;
+    }
+
+    .price-value {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--accent-strong);
+      margin-bottom: 4px;
+      background: linear-gradient(135deg, var(--magic-1), var(--magic-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .price-unit {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-weight: 400;
+    }
+
+    .price-list {
+      list-style: none;
+      font-size: 13px;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .price-list li {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      margin-bottom: 6px;
+      padding-left: 4px;
+      transition: transform var(--transition-fast);
+    }
+
+    .price-list li:hover {
+      transform: translateX(4px);
+    }
+
+    .price-list li::before {
+      content: "✓";
+      color: #22c55e;
+      font-size: 12px;
+      margin-top: 2px;
+      font-weight: bold;
+      background: var(--accent-soft);
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 0 10px var(--accent-glow);
+    }
+
+    /* ✨ About & Contact Magic ✨ */
+    .about-grid,
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    .about-text {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      font-weight: 400;
+    }
+
+    .about-highlight,
+    .contact-card {
+      border-radius: var(--radius-xl);
+      background: rgba(255, 255, 255, 0.97);
+      border: 1px solid var(--border-soft);
+      padding: 20px;
+      font-size: 14px;
+      color: var(--text-muted);
+      transition: all var(--transition-normal);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .about-highlight::before,
+    .contact-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 0%, rgba(167, 139, 250, 0.08) 50%, transparent 100%);
+      opacity: 0;
+      transition: opacity var(--transition-normal);
+      pointer-events: none;
+    }
+
+    .about-highlight:hover,
+    .contact-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-glow);
+      border-color: var(--magic-3);
+    }
+
+    .about-highlight:hover::before,
+    .contact-card:hover::before {
+      opacity: 1;
+    }
+
+    body.dark .about-highlight,
+    body.dark .contact-card {
+      background: rgba(15, 23, 42, 0.97);
+    }
+
+    .about-highlight strong {
+      color: var(--text-main);
+      font-weight: 700;
+      font-size: 16px;
+      display: block;
+      margin-bottom: 10px;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    .about-highlight strong::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--magic-3), var(--magic-2));
+    }
+
+    .contact-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 600;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-label::before {
+      content: "✨";
+      font-size: 10px;
+      animation: sparkle 2s ease-in-out infinite;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .contact-row span {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: transform var(--transition-fast);
+    }
+
+    .contact-row span:hover {
+      transform: translateX(4px);
+    }
+
+    .contact-value {
+      color: var(--text-main);
+      font-weight: 600;
+      text-decoration: none;
+      position: relative;
+      transition: color var(--transition-fast);
+    }
+
+    .contact-value::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: width var(--transition-fast);
+    }
+
+    .contact-value:hover {
+      color: var(--accent-strong);
+    }
+
+    .contact-value:hover::after {
+      width: 100%;
+    }
+
+    /* ✨ Footer Magic ✨ */
+    .footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .footer::before {
+      content: "✨";
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+      animation: float 3s ease-in-out infinite;
+      opacity: 0.7;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 500;
+      position: relative;
+      padding: 2px 0;
+      transition: color var(--transition-fast);
+    }
+
+    .footer-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: width var(--transition-fast);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-strong);
+    }
+
+    .footer-links a:hover::after {
+      width: 100%;
+    }
+
+    /* ✨ Floating Contact Buttons ✨ */
+    .floating-contact {
+      position: fixed;
+      right: 24px;
+      bottom: 28px;
+      z-index: 60;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .floating-btn {
+      width: 52px;
+      height: 52px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--magic-1), var(--magic-2));
+      box-shadow: 0 10px 35px rgba(15, 23, 42, 0.4), 0 0 30px var(--accent-glow);
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+      transition: all var(--transition-normal);
+      position: relative;
+      overflow: hidden;
+      animation: float-btn 3s ease-in-out infinite;
+    }
+
+    .floating-btn:nth-child(2) {
+      animation-delay: 0.5s;
+      background: linear-gradient(135deg, #38bdf8, #6366f1);
+      box-shadow: 0 10px 35px rgba(15, 23, 42, 0.4), 0 0 30px rgba(56, 189, 248, 0.6);
+    }
+
+    .floating-btn:nth-child(3) {
+      animation-delay: 1s;
+      background: linear-gradient(135deg, #facc15, #f97316);
+      box-shadow: 0 10px 35px rgba(15, 23, 42, 0.4), 0 0 30px rgba(250, 204, 21, 0.6);
+      color: #422006;
+    }
+
+    @keyframes float-btn {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .floating-btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+    }
+
+    .floating-btn:hover {
+      transform: translateY(-6px) scale(1.08);
+      box-shadow: 0 18px 55px rgba(15, 23, 42, 0.5), 0 0 45px var(--accent-glow);
+    }
+
+    .floating-btn:hover::before {
+      opacity: 1;
+    }
+
+    .floating-btn:active {
+      transform: translateY(-2px) scale(1.03);
+    }
+
+    /* ✨ Responsive Magic ✨ */
+    @media (max-width: 1024px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 32px 24px;
+      }
+      .hero-right {
+        order: -1;
+      }
+      .nav-links {
+        display: none;
+      }
+      .pricing-grid,
+      .grid-3,
+      .before-after-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .price-card.highlight {
+        transform: scale(1);
+      }
+      .price-card.highlight:hover {
+        transform: translateY(-10px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      main {
+        padding-inline: 20px;
+      }
+      .hero {
+        padding: 24px 20px;
+        margin-top: 16px;
+      }
+      .hero-title {
+        font-size: clamp(28px, 7vw, 38px);
+      }
+      .pricing-grid,
+      .grid-3,
+      .before-after-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .floating-contact {
+        right: 16px;
+        bottom: 20px;
+        flex-direction: row;
+        justify-content: center;
+      }
+      .nav-cta {
+        gap: 8px;
+      }
+      .btn {
+        padding: 8px 16px;
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav {
+        padding: 12px 16px;
+      }
+      .logo-mark {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+      }
+      .logo-text-main {
+        font-size: 18px;
+      }
+      .hero-badges {
+        gap: 8px;
+      }
+      .badge {
+        font-size: 11px;
+        padding: 4px 10px;
+      }
+      .hero-cta-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .section-tag {
+        align-self: flex-start;
+      }
+    }
+
+    /* ✨ Scroll Animations ✨ */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity var(--transition-slow), transform var(--transition-slow);
+    }
+
+    .animate-on-scroll.animated {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ✨ Loading Animation ✨ */
+    .loading-screen {
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      transition: opacity var(--transition-slow), visibility var(--transition-slow);
+    }
+
+    .loading-screen.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .loader {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #bbf7d0, var(--magic-1) 40%, var(--accent-strong) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: white;
+      box-shadow: 0 0 40px var(--accent-glow);
+      animation: loader-spin 1.5s ease-in-out infinite, pulse-glow 2s ease-in-out infinite;
+      position: relative;
+    }
+
+    .loader::after {
+      content: "";
+      position: absolute;
+      inset: -8px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: var(--magic-2);
+      border-bottom-color: var(--magic-3);
+      animation: loader-rotate 1.2s linear infinite;
+    }
+
+    @keyframes loader-spin {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    @keyframes loader-rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* ✨ Confetti Effect ✨ */
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background: var(--accent);
+      border-radius: 2px;
+      pointer-events: none;
+      z-index: 9999;
+      animation: confetti-fall 3s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes confetti-fall {
+      0% {
+        transform: translateY(-20px) rotate(0deg) scale(0);
+        opacity: 1;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(720deg) scale(1);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body class="light">
+  <!-- ✨ Loading Screen ✨ -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loader">✨</div>
+  </div>
+
+  <!-- ✨ Magic Cursor ✨ -->
+  <div class="magic-cursor" id="magic-cursor"></div>
+
+  <!-- ✨ Particles Background ✨ -->
+  <div class="magic-particles" id="magic-particles"></div>
+
+  <header id="site-header">
+    <nav class="nav">
+      <div class="logo">
+        <div class="logo-mark">F</div>
+        <div>
+          <div class="logo-text-main">
+            ForYou Reinigung
+            <span class="logo-wand">
+              ✨🧹
+            </span>
+          </div>
+          <div class="logo-text-sub">High Quality Cleaning</div>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#services" data-i18n-de="Leistungen" data-i18n-en="Services">Leistungen</a>
+        <a href="#before-after" data-i18n-de="Vorher / Nachher" data-i18n-en="Before / After">Vorher / Nachher</a>
+        <a href="#pricing" data-i18n-de="Preise" data-i18n-en="Pricing">Preise</a>
+        <a href="#about" data-i18n-de="Über uns" data-i18n-en="About">Über uns</a>
+        <a href="#contact" data-i18n-de="Kontakt" data-i18n-en="Contact">Kontakt</a>
+      </div>
+      <div class="nav-cta">
+        <div class="toggle-group">
+          <button class="toggle-btn active" id="lang-de">DE</button>
+          <button class="toggle-btn" id="lang-en">EN</button>
+        </div>
+        <div class="toggle-group">
+          <button class="toggle-btn active" id="mode-day">☀️</button>
+          <button class="toggle-btn" id="mode-night">🌙</button>
+        </div>
+        <a href="#contact" class="btn btn-primary" data-i18n-de="Angebot" data-i18n-en="Get quote">Angebot</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero animate-on-scroll">
+      <div class="hero-left">
+        <div class="hero-pill" data-i18n-de="Premium Reinigungsservice" data-i18n-en="Premium cleaning service">
+          <div class="hero-pill-dot"></div>
+          Premium Reinigungsservice
+        </div>
+        <h1 class="hero-title">
+          <span>ForYou Reinigung</span><br />
+          <span data-i18n-de="High Quality Cleaning Experience"
+                data-i18n-en="High Quality Cleaning Experience">
+            High Quality Cleaning Experience
+          </span>
+        </h1>
+        <p class="hero-subtitle"
+           data-i18n-de="Eine moderne Reinigungsfirma, die aussieht wie ein Design‑Studio – und arbeitet wie ein Profi‑Dienstleister."
+           data-i18n-en="A modern cleaning company that looks like a design studio – and works like a professional service provider.">
+          Eine moderne Reinigungsfirma, die aussieht wie ein Design‑Studio – und arbeitet wie ein Profi‑Dienstleister.
+        </p>
+        <div class="hero-badges">
+          <div class="badge" data-i18n-de="Wohnung & Büro" data-i18n-en="Home & Office">🏠 Wohnung & Büro</div>
+          <div class="badge" data-i18n-de="Fenster & Umzug" data-i18n-en="Windows & Move-out">🪟 Fenster & Umzug</div>
+          <div class="badge" data-i18n-de="Modernes, digitales Erlebnis" data-i18n-en="Modern digital experience">✨ Digitales Erlebnis</div>
+        </div>
+        <div class="hero-cta-row">
+          <a href="#contact" class="btn btn-primary"
+             data-i18n-de="Kostenloses Angebot sichern"
+             data-i18n-en="Get your free quote">
+            ✨ Kostenloses Angebot
+          </a>
+          <a href="#services" class="btn btn-ghost"
+             data-i18n-de="Leistungen ansehen"
+             data-i18n-en="View services">
+            Leistungen ansehen
+          </a>
+        </div>
+        <div class="hero-meta">
+          <span>
+            <span data-i18n-de="Einsatzgebiet: Köln • Bonn • Umgebung"
+                  data-i18n-en="Service area: Cologne • Bonn • region">
+              📍 Köln • Bonn • Umgebung
+            </span>
+          </span>
+          <span>
+            <span data-i18n-de="Flexible Termine & faire Preise"
+                  data-i18n-en="Flexible appointments & fair pricing">
+              ⏰ Flexible Termine & faire Preise
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="card-main">
+          <div class="card-main-header">
+            <div class="card-main-title"
+                 data-i18n-de="Live‑Status – ForYou Reinigung"
+                 data-i18n-en="Live status – ForYou Reinigung">
+              Live‑Status ✨
+            </div>
+            <div class="status-pill">
+              <span class="status-dot"></span>
+              <span data-i18n-de="Kapazität: Verfügbar"
+                    data-i18n-en="Capacity: Available">
+                Verfügbar
+              </span>
+            </div>
+          </div>
+          <div class="card-main-body">
+            <div class="card-main-row">
+              <div>
+                <div class="card-main-text"
+                     data-i18n-de="Nächster freier Slot"
+                     data-i18n-en="Next available slot">
+                  Nächster freier Slot
+                </div>
+                <div class="card-main-sub"
+                     data-i18n-de="Innerhalb von 24–48 Stunden"
+                     data-i18n-en="Within 24–48 hours">
+                  Innerhalb von 24–48 Stunden
+                </div>
+              </div>
+              <div class="card-main-tag"
+                   data-i18n-de="Express‑Reinigung"
+                   data-i18n-en="Express cleaning">
+                ⚡ Express
+              </div>
+            </div>
+            <div class="card-main-row">
+              <div>
+                <div class="card-main-text"
+                     data-i18n-de="Durchschnittliche Bewertung"
+                     data-i18n-en="Average rating">
+                  Durchschnittliche Bewertung
+                </div>
+                <div class="card-main-sub"
+                     data-i18n-de="4,9 / 5 – Stammkunden & Empfehlungen"
+                     data-i18n-en="4.9 / 5 – regular clients & referrals">
+                  ⭐ 4,9 / 5 – Top Bewertungen
+                </div>
+              </div>
+              <div class="card-main-tag"
+                   data-i18n-de="Qualitäts‑Check"
+                   data-i18n-en="Quality check">
+                ✅ Qualität
+              </div>
+            </div>
+            <div class="card-main-footer">
+              <small
+                data-i18n-de="✨ Rund um die Uhr für Sie im Einsatz – 24h Reinigungsservice."
+                data-i18n-en="✨ Around the clock at your service – 24h cleaning service.">
+                ✨ 24/7 Service für Sie
+              </small>
+              <strong>ForYou Reinigung</strong>
+            </div>
+          </div>
+          <div class="card-floating">
+            <div data-i18n-de="Live‑Status: Team unterwegs"
+                 data-i18n-en="Live status: Team on the way">
+              <span>🚀 Team unterwegs</span>
+            </div>
+            <div data-i18n-de="Aktuelle Zone: Köln • Bonn • Umgebung"
+                 data-i18n-en="Current zone: Cologne • Bonn • region">
+              <span>📍 Köln • Bonn</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section animate-on-scroll">
+      <div class="section-header">
+        <div>
+          <div class="section-title"
+               data-i18n-de="Leistungen, die mehr können als Standard."
+               data-i18n-en="Services that go beyond standard.">
+            ✨ Unsere Leistungen
+          </div>
+          <div class="section-subtitle"
+               data-i18n-de="Wir kombinieren präzise Reinigungsarbeit mit einem modernen, digitalen Service‑Erlebnis – für Privatkunden und Unternehmen."
+               data-i18n-en="We combine precise cleaning with a modern digital service experience – for private clients and businesses.">
+            Wir kombinieren präzise Reinigungsarbeit mit einem modernen, digitalen Service‑Erlebnis.
+          </div>
+        </div>
+        <div class="section-tag"
+             data-i18n-de="Wohnung • Büro • Fenster • Umzug"
+             data-i18n-en="Home • Office • Windows • Move-out">
+          🏠🏢🪟📦
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <div class="card-pill">
+            <span class="card-pill-dot"></span>
+            <span data-i18n-de="Premium Wohnungsreinigung" data-i18n-en="Premium home cleaning">
+              ✨ Premium Wohnung
+            </span>
+          </div>
+          <h3 data-i18n-de="Wohnungen & Häuser" data-i18n-en="Apartments & houses">
+            Wohnungen & Häuser
+          </h3>
+          <p data-i18n-de="Gründliche Reinigung für moderne Wohnungen und Häuser – ideal für Vielbeschäftigte, Familien und alle, die es minimalistisch und makellos mögen."
+             data-i18n-en="Thorough cleaning for modern apartments and houses – ideal for busy people, families and anyone who loves minimal and spotless spaces.">
+            Gründliche Reinigung für moderne Wohnungen – ideal für Vielbeschäftigte und Familien.
+          </p>
+          <ul class="card-list">
+            <li data-i18n-de="Regelmäßige oder einmalige Reinigung"
+                data-i18n-en="Regular or one-time cleaning">
+              Regelmäßige oder einmalige Reinigung
+            </li>
+            <li data-i18n-de="Küche, Bad, Wohnräume & Flächen"
+                data-i18n-en="Kitchen, bathroom, living areas & surfaces">
+              Küche, Bad, Wohnräume & alle Flächen
+            </li>
+            <li data-i18n-de="Detail‑Fokus: Griffe, Schalter, Spiegel"
+                data-i18n-en="Detail focus: handles, switches, mirrors">
+              Detail‑Fokus: Griffe, Schalter, Spiegel
+            </li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-pill">
+            <span class="card-pill-dot"></span>
+            <span data-i18n-de="Büro & Workspace" data-i18n-en="Office & workspace">
+              💼 Büro & Workspace
+            </span>
+          </div>
+          <h3 data-i18n-de="Moderne Büroreinigung" data-i18n-en="Modern office cleaning">
+            Moderne Büroreinigung
+          </h3>
+          <p data-i18n-de="Saubere Arbeitsplätze, Meetingräume und Empfangsbereiche – für Teams, die in einer klaren, strukturierten Umgebung arbeiten wollen."
+             data-i18n-en="Clean workstations, meeting rooms and reception areas – for teams that want to work in a clear, structured environment.">
+            Saubere Arbeitsplätze und Meetingräume – für Teams, die Klarheit lieben.
+          </p>
+          <ul class="card-list">
+            <li data-i18n-de="Flexible Zeiten außerhalb der Bürozeiten"
+                data-i18n-en="Flexible times outside office hours">
+              Flexible Zeiten außerhalb der Bürozeiten
+            </li>
+            <li data-i18n-de="Arbeitsplätze, Glasflächen, Sanitärbereiche"
+                data-i18n-en="Workstations, glass surfaces, sanitary areas">
+              Arbeitsplätze, Glasflächen, Sanitärbereiche
+            </li>
+            <li data-i18n-de="Ideal für Startups & Agenturen"
+                data-i18n-en="Ideal for startups & agencies">
+              Ideal für Startups & Agenturen
+            </li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-pill">
+            <span class="card-pill-dot"></span>
+            <span data-i18n-de="Fenster & Spezial" data-i18n-en="Windows & special">
+              🪟 Fenster & Spezial
+            </span>
+          </div>
+          <h3 data-i18n-de="Fenster & Umzugsreinigung" data-i18n-en="Windows & move-out cleaning">
+            Fenster & Umzugsreinigung
+          </h3>
+          <p data-i18n-de="Kristallklare Fenster und tiefenreine Räume – perfekt für Umzüge, Übergaben und besondere Anlässe."
+             data-i18n-en="Crystal-clear windows and deeply cleaned rooms – perfect for moves, handovers and special occasions.">
+            Kristallklare Fenster und tiefenreine Räume – perfekt für Umzüge und Übergaben.
+          </p>
+          <ul class="card-list">
+            <li data-i18n-de="Fenster innen & außen (je nach Zugang)"
+                data-i18n-en="Windows inside & outside (depending on access)">
+              Fenster innen & außen (je nach Zugang)
+            </li>
+            <li data-i18n-de="Umzugsreinigung inkl. Übergabe‑Fokus"
+                data-i18n-en="Move-out cleaning incl. handover focus">
+              Umzugsreinigung inkl. Übergabe‑Fokus
+            </li>
+            <li data-i18n-de="Individuelle Pakete auf Anfrage"
+                data-i18n-en="Custom packages on request">
+              Individuelle Pakete auf Anfrage
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="before-after" class="section animate-on-scroll">
+      <div class="section-header">
+        <div>
+          <div class="section-title"
+               data-i18n-de="Vorher / Nachher – echte Ergebnisse."
+               data-i18n-en="Before / After – real results.">
+            ✨ Vorher / Nachher
+          </div>
+          <div class="section-subtitle"
+               data-i18n-de="Ein Blick sagt mehr als tausend Worte. Ziehe den Regler, um den Unterschied zu sehen."
+               data-i18n-en="One look says more than a thousand words. Drag the slider to see the difference.">
+            Ein Blick sagt mehr als tausend Worte. Ziehe den Regler!
+          </div>
+        </div>
+        <div class="section-tag"
+             data-i18n-de="Mindestens 4 Beispiele"
+             data-i18n-en="At least 4 examples">
+          🎯 4 Beispiele
+        </div>
+      </div>
+
+      <div class="before-after-grid">
+        <!-- Gruppe 1: Büro vor / nach -->
+        <div class="ba-card">
+          <div class="ba-labels">
+            <span data-i18n-de="Vorher" data-i18n-en="Before">🌫️ Vorher</span>
+            <span data-i18n-de="Nachher" data-i18n-en="After">✨ Nachher</span>
+          </div>
+          <div class="ba-wrapper" data-ba>
+            <img class="ba-img"
+                 src="https://images.pexels.com/photos/37347/office-office-desk-computer-laptop.jpg?auto=compress&cs=tinysrgb&w=900"
+                 alt="Büro vorher" />
+            <div class="ba-after">
+              <img
+                src="https://images.pexels.com/photos/37347/office-office-desk-computer-laptop.jpg?auto=compress&cs=tinysrgb&w=900"
+                alt="Büro nachher" />
+            </div>
+            <div class="ba-handle">⇆</div>
+          </div>
+        </div>
+
+        <!-- Gruppe 2: Klinik vor / nach -->
+        <div class="ba-card">
+          <div class="ba-labels">
+            <span data-i18n-de="Vorher" data-i18n-en="Before">🌫️ Vorher</span>
+            <span data-i18n-de="Nachher" data-i18n-en="After">✨ Nachher</span>
+          </div>
+          <div class="ba-wrapper" data-ba>
+            <img class="ba-img"
+                 src="https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=900"
+                 alt="Klinik vorher" />
+            <div class="ba-after">
+              <img
+                src="https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=900"
+                alt="Klinik nachher" />
+            </div>
+            <div class="ba-handle">⇆</div>
+          </div>
+        </div>
+
+        <!-- Gruppe 3: Wartebereich vor / nach -->
+        <div class="ba-card">
+          <div class="ba-labels">
+            <span data-i18n-de="Vorher" data-i18n-en="Before">🌫️ Vorher</span>
+            <span data-i18n-de="Nachher" data-i18n-en="After">✨ Nachher</span>
+          </div>
+          <div class="ba-wrapper" data-ba>
+            <img class="ba-img"
+                 src="https://images.pexels.com/photos/3997985/pexels-photo-3997985.jpeg?auto=compress&cs=tinysrgb&w=900"
+                 alt="Wartebereich vorher" />
+            <div class="ba-after">
+              <img
+                src="https://images.pexels.com/photos/3997984/pexels-photo-3997984.jpeg?auto=compress&cs=tinysrgb&w=900"
+                alt="Wartebereich nachher" />
+            </div>
+            <div class="ba-handle">⇆</div>
+          </div>
+        </div>
+
+        <!-- Gruppe 4: Wohnzimmer vor / nach -->
+        <div class="ba-card">
+          <div class="ba-labels">
+            <span data-i18n-de="Vorher" data-i18n-en="Before">🌫️ Vorher</span>
+            <span data-i18n-de="Nachher" data-i18n-en="After">✨ Nachher</span>
+          </div>
+          <div class="ba-wrapper" data-ba>
+            <img class="ba-img"
+                 src="https://images.pexels.com/photos/3965515/pexels-photo-3965515.jpeg?auto=compress&cs=tinysrgb&w=900"
+                 alt="Wohnzimmer vorher" />
+            <div class="ba-after">
+              <img
+                src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=900"
+                alt="Wohnzimmer nachher" />
+            </div>
+            <div class="ba-handle">⇆</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section animate-on-scroll">
+      <div class="section-header">
+        <div>
+          <div class="section-title"
+               data-i18n-de="Preise, die klar bleiben."
+               data-i18n-en="Pricing that stays clear.">
+            💎 Transparente Preise
+          </div>
+          <div class="section-subtitle"
+               data-i18n-de="Richtwerte – du erhältst immer ein individuelles, transparentes Angebot."
+               data-i18n-en="Guide prices – you always receive an individual, transparent quote.">
+            Richtwerte – immer individuelles, transparentes Angebot.
+          </div>
+        </div>
+        <div class="section-tag"
+             data-i18n-de="Individuelle Angebote"
+             data-i18n-en="Custom quotes">
+          ✨ Individuell
+        </div>
+      </div>
+
+      <div class="pricing-grid">
+        <article class="price-card">
+          <h3 data-i18n-de="Wohnungsreinigung" data-i18n-en="Home cleaning">🏠 Wohnungsreinigung</h3>
+          <div class="price-tagline"
+               data-i18n-de="Ideal für regelmäßige oder einmalige Reinigung."
+               data-i18n-en="Ideal for regular or one-time cleaning.">
+            Ideal für regelmäßige oder einmalige Reinigung.
+          </div>
+          <div class="price-value">ab 79 €</div>
+          <div class="price-unit"
+               data-i18n-de="pro Einsatz (Richtwert)"
+               data-i18n-en="per visit (guide)">
+            pro Einsatz (Richtwert)
+          </div>
+          <ul class="price-list">
+            <li data-i18n-de="Grundreinigung von Küche, Bad & Wohnräumen"
+                data-i18n-en="Basic cleaning of kitchen, bathroom & living areas">
+              Grundreinigung Küche, Bad & Wohnräume
+            </li>
+            <li data-i18n-de="Staubwischen, Saugen, Wischen"
+                data-i18n-en="Dusting, vacuuming, mopping">
+              Staubwischen, Saugen, Wischen
+            </li>
+          </ul>
+        </article>
+
+        <article class="price-card highlight">
+          <h3 data-i18n-de="Büro & Gewerbe" data-i18n-en="Office & commercial">💼 Büro & Gewerbe</h3>
+          <div class="price-tagline"
+               data-i18n-de="Für moderne Büros, Agenturen & Workspaces."
+               data-i18n-en="For modern offices, agencies & workspaces.">
+            Für moderne Büros, Agenturen & Workspaces.
+          </div>
+          <div class="price-value"
+               data-i18n-de="auf Anfrage"
+               data-i18n-en="on request">
+            auf Anfrage
+          </div>
+          <div class="price-unit"
+               data-i18n-de="monatliche Pauschale möglich"
+               data-i18n-en="monthly flat rate possible">
+            monatliche Pauschale möglich
+          </div>
+          <ul class="price-list">
+            <li data-i18n-de="Regelmäßige Büroreinigung nach Plan"
+                data-i18n-en="Regular office cleaning by schedule">
+              Regelmäßige Büroreinigung nach Plan
+            </li>
+            <li data-i18n-de="Arbeitsplätze, Meetingräume, Empfang"
+                data-i18n-en="Workstations, meeting rooms, reception">
+              Arbeitsplätze, Meetingräume, Empfang
+            </li>
+          </ul>
+        </article>
+
+        <article class="price-card">
+          <h3 data-i18n-de="Fenster & Umzug" data-i18n-en="Windows & move-out">🪟 Fenster & Umzug</h3>
+          <div class="price-tagline"
+               data-i18n-de="Für Übergaben, Umzüge & besondere Anlässe."
+               data-i18n-en="For handovers, moves & special occasions.">
+            Für Übergaben, Umzüge & besondere Anlässe.
+          </div>
+          <div class="price-value"
+               data-i18n-de="individuell"
+               data-i18n-en="individual">
+            individuell
+          </div>
+          <div class="price-unit"
+               data-i18n-de="je nach Umfang"
+               data-i18n-en="depending on scope">
+            je nach Umfang
+          </div>
+          <ul class="price-list">
+            <li data-i18n-de="Fensterreinigung innen & außen"
+                data-i18n-en="Window cleaning inside & outside">
+              Fensterreinigung innen & außen
+            </li>
+            <li data-i18n-de="Umzugsreinigung inkl. Detail‑Fokus"
+                data-i18n-en="Move-out cleaning incl. detail focus">
+              Umzugsreinigung inkl. Detail‑Fokus
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section animate-on-scroll">
+      <div class="section-header">
+        <div>
+          <div class="section-title"
+               data-i18n-de="Nicht nur sauber – sondern durchdacht."
+               data-i18n-en="Not just clean – but considered.">
+            💡 Mehr als nur sauber
+          </div>
+          <div class="section-subtitle"
+               data-i18n-de="ForYou Reinigung verbindet klassische Reinigungsqualität mit einem modernen, digitalen Service‑Ansatz."
+               data-i18n-en="ForYou Reinigung combines classic cleaning quality with a modern digital service approach.">
+            Klassische Qualität trifft auf modernen digitalen Service.
+          </div>
+        </div>
+        <div class="section-tag"
+             data-i18n-de="Modern • Zuverlässig • Detailverliebt"
+             data-i18n-en="Modern • Reliable • Detail‑focused">
+          ✨ Modern • Zuverlässig
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text"
+             data-i18n-de="Wir wissen: Reinigungsfirmen sehen oft gleich aus – und arbeiten oft auch so. ForYou Reinigung geht bewusst einen anderen Weg. Unser Anspruch: Räume, die sich neu anfühlen, kombiniert mit einem Service, der sich anfühlt wie ein modernes Produkt: klare Kommunikation, digitale Abläufe, schnelle Reaktionszeiten."
+             data-i18n-en="We know: cleaning companies often look the same – and often work the same. ForYou Reinigung deliberately takes a different path. Our goal: spaces that feel new, combined with a service that feels like a modern product: clear communication, digital workflows, fast response times.">
+          Wir wissen: Reinigungsfirmen sehen oft gleich aus. ForYou Reinigung geht bewusst einen anderen Weg. Unser Anspruch: Räume, die sich <strong>neu anfühlen</strong>, kombiniert mit einem Service wie ein modernes Produkt: klare Kommunikation, digitale Abläufe, schnelle Reaktionszeiten.
+        </div>
+        <div class="about-highlight">
+          <strong data-i18n-de="Warum ForYou Reinigung?"
+                  data-i18n-en="Why ForYou Reinigung?">
+            ✨ Warum ForYou Reinigung?
+          </strong>
+          <br />
+          <span data-i18n-de="• Modernes, professionelles Auftreten – online & vor Ort"
+                data-i18n-en="• Modern, professional appearance – online & on-site">
+            🎨 Modernes, professionelles Auftreten – online & vor Ort
+          </span><br />
+          <span data-i18n-de="• Klare, transparente Angebote ohne Überraschungen"
+                data-i18n-en="• Clear, transparent quotes without surprises">
+            💰 Klare, transparente Angebote ohne Überraschungen
+          </span><br />
+          <span data-i18n-de="• Fokus auf langfristige Zusammenarbeit"
+                data-i18n-en="• Focus on long‑term collaboration">
+            🤝 Fokus auf langfristige Zusammenarbeit
+          </span><br />
+          <span data-i18n-de="• Ideal für Menschen & Unternehmen, die Wert auf Wirkung legen"
+                data-i18n-en="• Ideal for people & companies that care about impact">
+            🎯 Ideal für alle, die Wert auf Wirkung legen
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section animate-on-scroll">
+      <div class="section-header">
+        <div>
+          <div class="section-title"
+               data-i18n-de="Bereit für Räume, die sich neu anfühlen?"
+               data-i18n-en="Ready for spaces that feel new?">
+            🚀 Bereit für den Unterschied?
+          </div>
+          <div class="section-subtitle"
+               data-i18n-de="Schick uns kurz deine Anfrage – wir melden uns mit einem klaren, transparenten Angebot."
+               data-i18n-en="Send us a short request – we'll get back to you with a clear, transparent quote.">
+            Schick uns deine Anfrage – wir melden uns mit klarem Angebot.
+          </div>
+        </div>
+        <div class="section-tag"
+             data-i18n-de="Anfrage • WhatsApp • E‑Mail"
+             data-i18n-en="Request • WhatsApp • Email">
+          ✨ Schnell & einfach
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-label"
+               data-i18n-de="Direkter Kontakt"
+               data-i18n-en="Direct contact">
+            📞 Direkter Kontakt
+          </div>
+          <div class="contact-row">
+            <span>
+              📱 <a href="tel:+491234567890" class="contact-value">+49 123 456 7890</a>
+            </span>
+            <span>
+              💬 <a href="https://wa.me/491234567890" class="contact-value"
+                     data-i18n-de="WhatsApp: Direktanfrage möglich"
+                     data-i18n-en="WhatsApp: direct request possible">
+                WhatsApp: Direktanfrage möglich
+              </a>
+            </span>
+            <span>
+              ✉️ <a href="mailto:info@foryou-reinigung.de" class="contact-value">info@foryou-reinigung.de</a>
+            </span>
+          </div>
+          <br />
+          <div class="contact-label"
+               data-i18n-de="Einsatzgebiet"
+               data-i18n-en="Service area">
+            📍 Einsatzgebiet
+          </div>
+          <div class="contact-row">
+            <span data-i18n-de="📍 Köln • Bonn • Umgebung"
+                  data-i18n-en="📍 Cologne • Bonn • region">
+              🗺️ Köln • Bonn • Umgebung
+            </span>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-label"
+               data-i18n-de="Schnellanfrage (Beispiel‑Text)"
+               data-i18n-en="Quick request (sample text)">
+            ✨ Schnellanfrage
+          </div>
+          <p style="font-size: 13px; margin-top: 10px;"
+             data-i18n-de="Kopiere diesen Text und schicke ihn uns per WhatsApp oder E‑Mail:"
+             data-i18n-en="Copy this text and send it to us via WhatsApp or email:">
+            Kopiere diesen Text und schicke ihn uns:
+          </p>
+          <p style="font-size: 13px; margin-top: 10px; padding: 12px 14px; border-radius: 14px; background: rgba(255, 255, 255, 0.95); border: 1px solid var(--border-soft); font-weight: 500;"
+             data-i18n-de="„Hallo ForYou Reinigung, ich interessiere mich für eine Reinigung in [Stadt]. Objekt: [Wohnung/Büro], Größe: [m²], Art der Reinigung: [einmalig/regemäßig/Umzug]. Bitte senden Sie mir ein unverbindliches Angebot. Vielen Dank!“"
+             data-i18n-en=""Hello ForYou Reinigung, I'm interested in a cleaning in [city]. Object: [apartment/office], size: [m²], type of cleaning: [one‑time/regular/move‑out]. Please send me a non‑binding quote. Thank you!"">
+            „Hallo ForYou Reinigung, ich interessiere mich für eine Reinigung in [Stadt]. Objekt: [Wohnung/Büro], Größe: [m²], Art: [einmalig/regelmäßig/Umzug]. Bitte senden Sie mir ein unverbindliches Angebot. Vielen Dank!"
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© ForYou Reinigung – ✨ High Quality Cleaning Experience.</div>
+      <div class="footer-links">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+        <a href="#contact"
+           data-i18n-de="Kontakt"
+           data-i18n-en="Contact">
+          ✨ Kontakt
+        </a>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Floating contact buttons -->
+  <div class="floating-contact">
+    <a href="https://wa.me/491234567890" class="floating-btn" aria-label="WhatsApp">
+      💬
+    </a>
+    <a href="tel:+491234567890" class="floating-btn secondary" aria-label="Call">
+      📞
+    </a>
+    <a href="mailto:info@foryou-reinigung.de" class="floating-btn mail" aria-label="Email">
+      ✉️
+    </a>
+  </div>
+
+  <script>
+    // ✨ Loading Screen Magic ✨
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('loading-screen').classList.add('hidden');
+        // Trigger scroll animations after loading
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+          if (isElementInViewport(el)) {
+            el.classList.add('animated');
+          }
+        });
+      }, 1200);
+    });
+
+    // ✨ Magic Cursor ✨
+    const cursor = document.getElementById('magic-cursor');
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+
+    document.querySelectorAll('a, button, .card, .btn, .ba-wrapper, .floating-btn').forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('active'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
+      el.addEventListener('click', (e) => createSparkle(e.clientX, e.clientY));
+    });
+
+    function createSparkle(x, y) {
+      const sparkle = document.createElement('div');
+      sparkle.className = 'sparkle';
+      sparkle.innerHTML = '✨';
+      sparkle.style.left = x + 'px';
+      sparkle.style.top = y + 'px';
+      document.body.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 600);
+    }
+
+    // ✨ Particles Background ✨
+    const particlesContainer = document.getElementById('magic-particles');
+    function createParticle() {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.animationDelay = Math.random() * 3 + 's';
+      particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      
+      // Random magic colors
+      const colors = ['#22c55e', '#38bdf8', '#a78bfa', '#facc15'];
+      particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+      particle.style.boxShadow = `0 0 10px ${particle.style.background}`;
+      
+      particlesContainer.appendChild(particle);
+      
+      // Remove particle after animation
+      setTimeout(() => particle.remove(), 5000);
+    }
+
+    // Create particles periodically
+    setInterval(createParticle, 300);
+
+    // ✨ Language Toggle ✨
+    const langButtons = {
+      de: document.getElementById("lang-de"),
+      en: document.getElementById("lang-en"),
+    };
+
+    function setLanguage(lang) {
+      Object.values(langButtons).forEach(btn => btn.classList.remove("active"));
+      langButtons[lang].classList.add("active");
+
+      document.querySelectorAll("[data-i18n-de]").forEach(el => {
+        const de = el.getAttribute("data-i18n-de");
+        const en = el.getAttribute("data-i18n-en");
+        el.textContent = lang === "de" ? de : (en || de);
+      });
+    }
+
+    langButtons.de.addEventListener("click", () => setLanguage("de"));
+    langButtons.en.addEventListener("click", () => setLanguage("en"));
+
+    // ✨ Dark/Light Mode Toggle ✨
+    const modeButtons = {
+      day: document.getElementById("mode-day"),
+      night: document.getElementById("mode-night"),
+    };
+
+    function setMode(mode) {
+      Object.values(modeButtons).forEach(btn => btn.classList.remove("active"));
+      modeButtons[mode].classList.add("active");
+      if (mode === "night") {
+        document.body.classList.add("dark");
+        // Add starry effect in dark mode
+        if (!document.querySelector('.stars')) {
+          createStarryBackground();
+        }
+      } else {
+        document.body.classList.remove("dark");
+        const stars = document.querySelector('.stars');
+        if (stars) stars.remove();
+      }
+    }
+
+    function createStarryBackground() {
+      const stars = document.createElement('div');
+      stars.className = 'stars';
+      stars.style.cssText = `
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 1;
+        background-image: 
+          radial-gradient(2px 2px at 20px 30px, white, transparent),
+          radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+          radial-gradient(2px 2px at 50px 160px, white, transparent),
+          radial-gradient(2px 2px at 90px 40px, rgba(255,255,255,0.9), transparent),
+          radial-gradient(2px 2px at 130px 80px, white, transparent);
+        background-size: 200px 200px;
+        animation: twinkle 4s ease-in-out infinite;
+        opacity: 0.6;
+      `;
+      document.body.appendChild(stars);
+      
+      // Add animation keyframes if not exists
+      if (!document.querySelector('#twinkle-keyframes')) {
+        const style = document.createElement('style');
+        style.id = 'twinkle-keyframes';
+        style.textContent = `
+          @keyframes twinkle {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.8; }
+          }
+        `;
+        document.head.appendChild(style);
+      }
+    }
+
+    modeButtons.day.addEventListener("click", () => setMode("day"));
+    modeButtons.night.addEventListener("click", () => setMode("night"));
+
+    // ✨ Before/After Slider ✨
+    document.querySelectorAll("[data-ba]").forEach(wrapper => {
+      const after = wrapper.querySelector(".ba-after");
+      const handle = wrapper.querySelector(".ba-handle");
+
+      function update(x) {
+        const rect = wrapper.getBoundingClientRect();
+        let pos = (x - rect.left) / rect.width;
+        pos = Math.max(0.05, Math.min(0.95, pos));
+        after.style.width = (pos * 100) + "%";
+        handle.style.left = (pos * 100) + "%";
+      }
+
+      wrapper.addEventListener("mousemove", e => {
+        if (e.buttons !== 1) return;
+        update(e.clientX);
+        createSparkle(e.clientX, e.clientY);
+      });
+
+      wrapper.addEventListener("mousedown", e => {
+        update(e.clientX);
+      });
+
+      wrapper.addEventListener("touchstart", e => {
+        update(e.touches[0].clientX);
+      });
+
+      wrapper.addEventListener("touchmove", e => {
+        update(e.touches[0].clientX);
+        createSparkle(e.touches[0].clientX, e.touches[0].clientY);
+      });
+    });
+
+    // ✨ Header Magic on Scroll ✨
+    const header = document.getElementById("site-header");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 80) {
+        header.classList.add("magic-active");
+      } else {
+        header.classList.remove("magic-active");
+      }
+    });
+
+    // ✨ Scroll Animations ✨
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0
+      );
+    }
+
+    function handleScrollAnimations() {
+      document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        if (isElementInViewport(el)) {
+          el.classList.add('animated');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', handleScrollAnimations);
+    window.addEventListener('load', handleScrollAnimations);
+
+    // ✨ Confetti on CTA Click ✨
+    document.querySelectorAll('.btn-primary').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        createConfetti();
+        // Smooth scroll to contact
+        document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    function createConfetti() {
+      const colors = ['#22c55e', '#38bdf8', '#a78bfa', '#facc15', '#f97316'];
+      for (let i = 0; i < 30; i++) {
+        setTimeout(() => {
+          const confetti = document.createElement('div');
+          confetti.className = 'confetti';
+          confetti.style.left = Math.random() * 100 + 'vw';
+          confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+          confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+          confetti.style.animationDelay = Math.random() * 0.5 + 's';
+          document.body.appendChild(confetti);
+          setTimeout(() => confetti.remove(), 3000);
+        }, i * 50);
+      }
+    }
+
+    // ✨ Initialize ✨
+    setLanguage("de");
+    setMode("day");
+    
+    // Add hover effect to cards on mobile
+    if ('ontouchstart' in window) {
+      document.querySelectorAll('.card, .price-card, .ba-card').forEach(card => {
+        card.addEventListener('touchstart', function() {
+          this.style.transform = 'translateY(-4px)';
+          this.style.boxShadow = 'var(--shadow-glow)';
+        });
+        card.addEventListener('touchend', function() {
+          this.style.transform = '';
+          this.style.boxShadow = '';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
